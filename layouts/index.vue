@@ -1,12 +1,13 @@
 <template>
   <v-app light>
-    <v-navigation-drawer
+    <v-navigation-drawer class="drawer"
       :mini-variant.sync="miniVariant"
       :clipped="clipped"
       v-model="drawer"
+      temporary
+      disable-resize-watcher
       fixed
-      app
-      hidden-lg      
+      app      
     >
       <v-list>
         <v-list-tile
@@ -27,7 +28,7 @@
     </v-navigation-drawer>
 
     <v-toolbar app :clipped-left="clipped" dense flat color="transparent">
-        <v-toolbar-side-icon hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
+        <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" color="transparent" flat>
           <h2 class="black--text">Site Logo</h2></v-btn>
@@ -55,7 +56,7 @@
     },
     data () {
       return {
-        clipped: false,
+        clipped: true,
         drawer: false,
         fixed: false,
         items: [{},
@@ -72,7 +73,15 @@
 </script>
 
 
+
 <style>
+
+/* disable-resize-watcher  - this keeps the app from adding the navigation-drawer on wider screens  */
+
+/* .burger {
+  visibility: hidden;
+} */
+
 
 .div-with-background {
   height: 100vh; 
