@@ -27,7 +27,7 @@
       </v-list>      
     </v-navigation-drawer>
 
-    <v-toolbar app :clipped-left="clipped" dense flat color="transparent">
+    <v-toolbar app :clipped-left="true" dense flat color="transparent">
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" color="transparent" flat>
@@ -80,8 +80,24 @@
 /* disable-resize-watcher  - this keeps the app from adding the navigation-drawer on wider screens  */
 
 /* .burger {
-  visibility: hidden;
+  margin-left: 2rem;
 } */
+
+.v-toolbar__title:not(:first-child) {
+      margin-left: 0;
+    }
+
+
+
+@media only screen and (min-width: 56.25em) {
+  .burger {
+    visibility: hidden;    
+  }
+  .v-toolbar__content, .v-toolbar__extension {
+  padding: 0;
+}
+
+  }
 
 
 .div-with-background {
