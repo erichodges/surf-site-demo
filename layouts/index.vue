@@ -34,7 +34,7 @@
           <h2 class="black--text">Site Logo</h2></v-btn>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items>
+        <v-toolbar-items class="toolbar-items">
           <v-btn to="/signin" flat color="white"><h3>Products</h3></v-btn>
           <v-btn to="/signup" flat color="white"><h3>About</h3></v-btn>
           <v-btn to="/#" flat color="white"><h3>Contact</h3></v-btn>
@@ -87,7 +87,12 @@
       margin-left: 0;
     }
 
-
+@media only screen and (max-width: 56.25em) {
+  .toolbar-items {
+    visibility: hidden;
+    width: 0;
+  }
+}
 
 @media only screen and (min-width: 56.25em) {
   .burger {
