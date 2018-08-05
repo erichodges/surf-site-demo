@@ -38,6 +38,7 @@
           <v-btn to="/signin" flat color="white"><h3>Products</h3></v-btn>
           <v-btn to="/signup" flat color="white"><h3>About</h3></v-btn>
           <v-btn to="/#" flat color="white"><h3>Contact</h3></v-btn>
+          <div class="toolbar-spacer"></div>
         </v-toolbar-items>
       </v-toolbar>
 
@@ -79,9 +80,6 @@
 
 /* disable-resize-watcher  - this keeps the app from adding the navigation-drawer on wider screens  */
 
-/* .burger {
-  margin-left: 2rem;
-} */
 
 .v-toolbar__title:not(:first-child) {
       margin-left: 0;
@@ -104,6 +102,9 @@
 
   }
 
+.toolbar-spacer {
+  margin-right: 2rem;
+}
 
 .div-with-background {
   height: 100vh; 
