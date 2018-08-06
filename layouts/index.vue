@@ -94,7 +94,8 @@
 
 @media only screen and (min-width: 56.25em) {
   .burger {
-    visibility: hidden;    
+    visibility: hidden;
+    width: 0;   
   }
   .v-toolbar__content, .v-toolbar__extension {
   padding: 0;
