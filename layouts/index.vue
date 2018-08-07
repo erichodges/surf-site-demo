@@ -30,7 +30,8 @@
     </v-navigation-drawer>
 
 <!-- Navigation Toolbar -->
-    <v-toolbar app :clipped-left="true" dense flat color="transparent">
+  
+    <v-toolbar  app :clipped-left="true" dense flat color="transparent">
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" color="transparent" flat>
@@ -44,7 +45,7 @@
           <v-btn v-scroll-to="'#section-4'" flat color="white"><h3>Contact</h3></v-btn>
           <div class="toolbar-spacer"></div>
         </v-toolbar-items>
-      </v-toolbar>
+    </v-toolbar>  
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
       
@@ -84,25 +85,25 @@
 
 /* disable-resize-watcher  - this keeps the app from adding the navigation-drawer on wider screens  */
 
-
 .v-toolbar__title:not(:first-child) {
-      margin-left: 0;
+      margin-left: 0 !important;
     }
 
 @media only screen and (max-width: 56.25em) {
-  .toolbar-items {
-    visibility: hidden;
-    width: 0;
+  .toolbar-items {    
+    visibility: hidden !important;
+    width: 0 !important;
   }
 }
 
 @media only screen and (min-width: 56.25em) {
   .burger {
-    visibility: hidden;
-    width: 0;   
+    left: -1rem;
+    visibility: hidden !important;
+    width: 0 !important;   
   }
   .v-toolbar__content, .v-toolbar__extension {
-  padding: 0;
+  padding: 0 !important;
 }
 
   }
