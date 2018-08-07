@@ -9,6 +9,8 @@
       fixed
       app      
     >
+      <v-btn v-scroll-to="'#section-2'" flat color="Blue"><h3>Products</h3>
+      </v-btn>
       <v-list>
         <v-list-tile
           router
@@ -27,6 +29,7 @@
       </v-list>      
     </v-navigation-drawer>
 
+<!-- Navigation Toolbar -->
     <v-toolbar app :clipped-left="true" dense flat color="transparent">
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
@@ -35,13 +38,14 @@
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="toolbar-items">
-          <v-btn to="/signin" flat color="white"><h3>Products</h3></v-btn>
-          <v-btn to="/signup" flat color="white"><h3>About</h3></v-btn>
-          <v-btn to="/#" flat color="white"><h3>Contact</h3></v-btn>
+          <v-btn v-scroll-to="'#section-2'" flat color="white"><h3>Products</h3>
+          </v-btn>
+          <v-btn v-scroll-to="'#section-3'" flat color="white"><h3>About</h3></v-btn>
+          <v-btn v-scroll-to="'#section-4'" flat color="white"><h3>Contact</h3></v-btn>
           <div class="toolbar-spacer"></div>
         </v-toolbar-items>
       </v-toolbar>
-
+<!-- End Navigation Toolbar -->
     <div class="div-with-background">
       
       <nuxt />
@@ -62,7 +66,7 @@
         drawer: false,
         fixed: false,
         items: [{},
-          { icon: 'apps', title: 'Welcome', to: '/' },
+          { icon: 'apps', title: 'Welcome', to: '/section-2' },
           { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
         ],
         miniVariant: false,

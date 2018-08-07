@@ -1,7 +1,7 @@
 <template>
-  <v-footer fixed="fixed" app class="black">
-    <span class="copy-text">&copy; 2018</span>
-  </v-footer>
+  <div>
+    <h1 class="copy-text">Footer</h1>
+  </div>
 </template>
 
 <script>
@@ -9,8 +9,10 @@
 
 <style>
   .copy-text {
+    background-color: darkgray;
+    text-align: center;
     color: white;
-    margin-left: 2rem;
+    
   }
 </style>
 
