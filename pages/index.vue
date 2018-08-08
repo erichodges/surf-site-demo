@@ -1,6 +1,6 @@
 <template>
   <main>
-        <section class="section-1">    
+        <section id="section-1" class="section-1">    
 
       <div class="section-1__heading">           
         <h1 class="title">

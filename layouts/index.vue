@@ -52,7 +52,7 @@
     </v-toolbar>  
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
-      <v-btn to="/" class="pageup-btn"
+      <v-btn v-scroll-to="'#section-1'" class="pageup-btn"
         color="blue"
         dark                   
         fixed
@@ -61,7 +61,7 @@
         nuxt
         fab
       >
-        <v-icon>add</v-icon>
+        <v-icon>keyboard_arrow_up</v-icon>
       </v-btn>
       <nuxt />
       
