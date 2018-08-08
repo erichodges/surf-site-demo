@@ -1,32 +1,36 @@
 <template>
   <v-app light>
-    <v-navigation-drawer class="drawer"
+    <v-navigation-drawer dark class="drawer"
       :mini-variant.sync="miniVariant"
       :clipped="clipped"
       v-model="drawer"
       temporary
       disable-resize-watcher
       fixed
-      app      
+      app
+      width=200
     >
-      <v-btn v-scroll-to="'#section-2'" flat color="Blue"><h3>Products</h3>
-      </v-btn>
+     
       <v-list>
-        <v-list-tile
-          router
-          :to="item.to"
-          :key="i"
-          v-for="(item, i) in items"
-          exact
-        >
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
+        <v-toolbar-side-icon class="burger-drawer" @click="drawer = !drawer"></v-toolbar-side-icon>
+
+        <ul class="sidenav-ul">
+          <li v-scroll-to="'#section-2'" class="sidenav-link-style">Products</li>
+          <li v-scroll-to="'#section-3'" class="sidenav-link-style">About</li>
+          <li v-scroll-to="'#section-4'" class="sidenav-link-style">Contact</li>
+        </ul>
+        <!-- <v-list-tile>
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title"></v-list-tile-title>
+            <v-list-tile-title class="sidenav-link-style" v-scroll-to="'#section-2'" display-2>
+              Section 2
+            </v-list-tile-title>            
+            <v-list-tile-title class="sidenav-link-style" v-scroll-to="'#section-3'" display-2>
+              Section 3
+            </v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile>
-      </v-list>      
+        </v-list-tile> -->
+
+      </v-list>            
     </v-navigation-drawer>
 
 <!-- Navigation Toolbar -->
@@ -40,7 +44,7 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class="toolbar-items">
           <v-btn v-scroll-to="'#section-2'" flat color="white"><h3>Products</h3>
-          </v-btn>
+          </v-btn>          
           <v-btn v-scroll-to="'#section-3'" flat color="white"><h3>About</h3></v-btn>
           <v-btn v-scroll-to="'#section-4'" flat color="white"><h3>Contact</h3></v-btn>
           <div class="toolbar-spacer"></div>
@@ -48,8 +52,19 @@
     </v-toolbar>  
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
-      
+      <v-btn to="/" class="pageup-btn"
+        color="blue"
+        dark                   
+        fixed
+        bottom
+        right
+        nuxt
+        fab
+      >
+        <v-icon>add</v-icon>
+      </v-btn>
       <nuxt />
+      
       <Footer />
     </div>
   </v-app>
@@ -66,9 +81,9 @@
         clipped: true,
         drawer: false,
         fixed: false,
-        items: [{},
-          { icon: 'apps', title: 'Welcome', to: '/section-2' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
+        items: [
+          { icon: 'apps', title: 'Welcome', to: '/' },
+          { icon: 'bubble_chart', title: 'Inspire', to: '/' }
         ],
         miniVariant: false,
         right: false,
@@ -110,6 +125,33 @@
 
 .toolbar-spacer {
   margin-right: 2rem;
+}
+
+/* .list-tile {
+  font-style: bold;
+} */
+
+.burger-drawer {
+  /* position: absolute; */
+  top: -9px;
+}
+
+/* Side Nav  */
+.sidenav-ul {
+  padding-left: 1.2rem;
+}
+.sidenav-link-style {
+  cursor: pointer;
+  font-size: 1.2rem;
+  list-style: none;
+  
+  text-decoration: none;
+  
+}
+/* End Side Nav */
+
+.pageup-btn {
+  bottom: +2rem;
 }
 
 .div-with-background {
