@@ -1,4 +1,4 @@
-# nuxt/vuetify scrolling template
+# surf-site-demo
 
 * axios
 * vue-scrollto
