@@ -1,6 +1,8 @@
-# vue-nuxt-vuetify
+# nuxt/vuetify scrolling template
 
-> Nuxt.js + Vuetify.js project
+* axios
+* vue-scrollto
+
 
 ## Build Setup
 
