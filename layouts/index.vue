@@ -15,7 +15,8 @@
         <v-toolbar-side-icon class="burger-drawer" @click="drawer = !drawer"></v-toolbar-side-icon>
 
         <ul class="sidenav-ul">
-          <li v-scroll-to="'#section-2'" class="sidenav-link-style">Products</li>
+          
+          <li v-scroll-to="'#section-2'" class="sidenav-link-style">Products</li>  
           <li v-scroll-to="'#section-3'" class="sidenav-link-style">About</li>
           <li v-scroll-to="'#section-4'" class="sidenav-link-style">Contact</li>
         </ul>
@@ -53,7 +54,7 @@
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
       <v-btn v-scroll-to="'#section-1'" class="pageup-btn"
-        color="blue"
+        color="primary"
         dark                   
         fixed
         bottom
@@ -127,9 +128,6 @@
   margin-right: 2rem;
 }
 
-/* .list-tile {
-  font-style: bold;
-} */
 
 .burger-drawer {
   /* position: absolute; */
@@ -138,13 +136,13 @@
 
 /* Side Nav  */
 .sidenav-ul {
-  padding-left: 1.2rem;
+  padding-left: 2.7rem;
 }
 .sidenav-link-style {
   cursor: pointer;
   font-size: 1.2rem;
   list-style: none;
-  
+  margin: 10px;
   text-decoration: none;
   
 }

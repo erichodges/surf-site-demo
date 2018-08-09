@@ -101,12 +101,12 @@ export default {
 }
 
 .button--green {  
-  font-size: 1.4rem;
+  font-size: 1rem;
   display: inline-block;
   border-radius: 4px;
   
   color: #fff;
-    background-color: #4670e4;
+  background-color: #2196F3;
   text-decoration: none;
   padding: 10px 30px;
 

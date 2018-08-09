@@ -1,4 +1,4 @@
-# vue-nuxt-one
+# vue-nuxt-vuetify
 
 > Nuxt.js + Vuetify.js project
 
