@@ -154,7 +154,7 @@
 
 .div-with-background {
   height: 100vh; 
-  background-image: url('~/static/images/1.jpg');      
+  background-image: url('~/static/images/pexels-photo-416676.jpeg');      
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
