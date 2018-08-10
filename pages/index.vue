@@ -10,7 +10,7 @@
           <!-- {{ items.fields.h2 }} -->
         </h2>
         </div>
-        <div class="links">
+        <!-- <div class="links">
           <a
             href="#"
             v-scroll-to="'#section-2'"
@@ -18,7 +18,7 @@
           >
           Get Started
           </a>          
-        </div>
+        </div> -->
       <!-- </div> -->
       <div class="down-arrow-div ">
         <a href="#" v-scroll-to="'#section-2'">

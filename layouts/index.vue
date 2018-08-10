@@ -40,14 +40,14 @@
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" color="transparent" flat>
-          <h2 class="black--text">Site Logo</h2></v-btn>
+          <h1 class="black--text">Rad Boards</h1></v-btn>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="toolbar-items">
-          <v-btn v-scroll-to="'#section-2'" flat color="white"><h3>Products</h3>
+          <v-btn v-scroll-to="'#section-2'" flat color="black"><h2>Products</h2>
           </v-btn>          
-          <v-btn v-scroll-to="'#section-3'" flat color="white"><h3>About</h3></v-btn>
-          <v-btn v-scroll-to="'#section-4'" flat color="white"><h3>Contact</h3></v-btn>
+          <v-btn v-scroll-to="'#section-3'" flat color="black"><h2>About</h2></v-btn>
+          <v-btn v-scroll-to="'#section-4'" flat color="black"><h2>Contact</h2></v-btn>
           <div class="toolbar-spacer"></div>
         </v-toolbar-items>
     </v-toolbar>  
@@ -100,6 +100,9 @@
 <style>
 
 /* disable-resize-watcher  - this keeps the app from adding the navigation-drawer on wider screens  */
+.black--text {
+  font-size: 3rem;
+}
 
 .v-toolbar__title:not(:first-child) {
       margin-left: 0 !important;
@@ -140,7 +143,7 @@
 }
 .sidenav-link-style {
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 2rem;
   list-style: none;
   margin: 10px;
   text-decoration: none;
@@ -163,6 +166,7 @@
 /* this removes all caps from the buttons */
   #app .v-btn {
     text-transform: none;
+    font-size: 1.5rem;
   }
 
 </style>
