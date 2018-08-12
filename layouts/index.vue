@@ -12,7 +12,8 @@
     >
      
       <v-list>
-        <v-toolbar-side-icon class="burger-drawer" @click="drawer = !drawer"></v-toolbar-side-icon>
+        <v-icon class="burger-drawer" @click="drawer = !drawer">close</v-icon>
+        <!-- <v-toolbar-side-icon class="burger-drawer" @click="drawer = !drawer"></v-toolbar-side-icon> -->
 
         <ul class="sidenav-ul">
           
@@ -36,7 +37,7 @@
 
 <!-- Navigation Toolbar -->
   
-    <v-toolbar  app :clipped-left="true" dense flat color="transparent">
+    <v-toolbar  app scroll-toolbar-off-screen scroll-threshold=150 dense flat color="transparent">
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" v-scroll-to="'#section-1'" color="transparent" flat>
@@ -61,6 +62,7 @@
         right
         nuxt
         fab
+        transition
       >
         <v-icon>keyboard_arrow_up</v-icon>
       </v-btn>
@@ -134,7 +136,8 @@
 
 .burger-drawer {
   /* position: absolute; */
-  top: -9px;
+  margin-top: 5px;
+  margin-left: 1.2rem;
 }
 
 /* Side Nav  */
