@@ -39,7 +39,7 @@
     <v-toolbar  app :clipped-left="true" dense flat color="transparent">
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
-          <v-btn to="/" color="transparent" flat>
+          <v-btn to="/" v-scroll-to="'#section-1'" color="transparent" flat>
           <h1 class="black--text">Rad Boards</h1></v-btn>
         </v-toolbar-title>
         <v-spacer></v-spacer>
