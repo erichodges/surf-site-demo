@@ -37,7 +37,7 @@
 
 <!-- Navigation Toolbar -->
   
-    <v-toolbar  app scroll-toolbar-off-screen scroll-threshold=150 dense flat color="transparent">
+    <v-toolbar  app scrollOffScreen :scrollThreshold="150" dense flat color="transparent">
         <v-toolbar-side-icon class="burger" hidden-md @click="drawer = !drawer"></v-toolbar-side-icon>
         <v-toolbar-title>
           <v-btn to="/" v-scroll-to="'#section-1'" color="transparent" flat>

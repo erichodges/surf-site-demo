@@ -134,6 +134,7 @@ export default {
 
 .down-arrow-div {
   padding-top: 7rem;
+  z-index: 10;
 }
 
 .down-arrow {
