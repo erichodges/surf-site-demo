@@ -2,13 +2,24 @@
   <main>
         <section id="section-1" class="section-1">    
 
-      <div class="section-1__heading">           
+      <div class="section-1__heading">  
+      
+        <h1 class="heading">Test Heading Text</h1>
         <h1 class="title">
          <!-- {{ items.fields.h1 }} -->
         </h1>
         <h2 class="subtitle">
           <!-- {{ items.fields.h2 }} -->
         </h2>
+          <div class="down-arrow-div">
+            <a href="#" v-scroll-to="'#section-2'">
+              <svg class="down-arrow bounce" fill="#fff" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+              <path d="M0-.75h24v24H0z" fill="none"/>
+              </svg>
+            </a>        
+          </div>
+
         </div>
         <!-- <div class="links">
           <a
@@ -20,14 +31,7 @@
           </a>          
         </div> -->
       <!-- </div> -->
-      <div class="down-arrow-div">
-        <a href="#" v-scroll-to="'#section-2'">
-          <svg class="down-arrow bounce" fill="#fff" height="60" viewBox="0 0 24 24" width="60" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
-          <path d="M0-.75h24v24H0z" fill="none"/>
-        </svg>
-        </a>        
-      </div>
+      
 
     </section>
 
@@ -60,19 +64,28 @@ export default {
 
 <style scoped>
 
+.heading {
+  font-size: 10rem;
+  
+  grid-row: 3;
+  /* margin-top: auto; - Places text at the bottom of the row. */
+  margin-top: auto; 
+  text-align: center;
+  
+}
+
 .section-1 {
   height: 100vh; 
-  align-items: center;
-  text-align: center;
-  overflow:hidden;
+
+  /* overflow:hidden; */
 
 }
 
 
 .section-1__heading {
-  display: grid;
-  grid-template-rows: 15rem 15rem 15rem 15rem auto auto auto;
-
+  display: grid;  
+  grid-template-rows: 10vh auto 1fr 10vh;
+  height: 100vh;
 }
 
 .title {
@@ -82,7 +95,7 @@ export default {
   font-size: 8rem;
   color: #fff;
   letter-spacing: 1px;
-  grid-row: 5 / 6;
+  /* grid-row: 5 / 6; */
   
 }
 
@@ -92,12 +105,12 @@ export default {
   color: #fff;
   word-spacing: .5rem;
   padding-bottom: 1.5rem;
-  grid-row: 6 /7;
+  /* grid-row: 6 /7; */
 }
 
 .links {  
   padding-top: 2.5rem;
-  grid-row: 7 / 8;
+  /* grid-row: 7 / 8; */
 }
 
 .button--green {  
@@ -133,12 +146,18 @@ export default {
 }
 
 .down-arrow-div {
-  padding-top: 7rem;
-  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+  /* grid-column: 2; */
+  grid-row: 4;
 }
 
 .down-arrow {
-  fill: #d60d0d;
+  fill: #636262;
+  margin-top: 2.5rem; 
 
   /* &:hover {
     transform: translateY(5px);
@@ -149,7 +168,7 @@ export default {
  .down-arrow:hover {
     transform: translateY(5px);
     transition: transform .25s;
-    fill: #fff;
+    fill: #000000;
  }
 
 
