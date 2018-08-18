@@ -17,7 +17,8 @@ module.exports = {
   },
   plugins: [
     {src: '~/plugins/vue-scrollto'},
-    {src: '~/plugins/vuetify.js'}
+    {src: '~/plugins/vuetify'},
+    {src: '~/plugins/show-hide-btn'}
   ],
   css: [
     '~/assets/style/app.styl'

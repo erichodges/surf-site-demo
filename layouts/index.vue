@@ -54,7 +54,7 @@
     </v-toolbar>  
 <!-- End Navigation Toolbar -->
     <div class="div-with-background">
-      <v-btn v-scroll-to="'#section-1'" class="pageup-btn"
+      <v-btn v-scroll="handleScroll" v-scroll-to="'#section-1'" class="pageup-btn"
         color="primary"
         dark                   
         fixed
@@ -79,19 +79,26 @@
     components: {
       Footer
     },
-    data () {
-      return {
-        clipped: true,
-        drawer: false,
-        fixed: false,
-        items: [
-          { icon: 'apps', title: 'Welcome', to: '/' },
-          { icon: 'bubble_chart', title: 'Inspire', to: '/' }
-        ],
-        miniVariant: false,
-        right: false,
-        rightDrawer: false,
-        title: 'Nuxt/Vuetify'
+    data: () => ({
+      clipped: true,
+      drawer: false,
+      fixed: false,
+      items: [
+        { icon: 'apps', title: 'Welcome', to: '/' },
+        { icon: 'bubble_chart', title: 'Inspire', to: '/' }
+      ],
+      miniVariant: false,
+      right: false,
+      rightDrawer: false,
+      title: 'Nuxt/Vuetify'
+    }),
+    methods: {
+      handleScroll (evt, el) {
+        if (window.scrollY > 50) {
+          el.setAttribute('style', 'opacity: 1; transform: translate3d(0, -10px, 0')
+        } else if (window.scrollY < 50) {
+          el.setAttribute('style', 'opacity: 0; transform: translate3d(0, 10px, 0')
+        }
       }
     }
   }
@@ -156,6 +163,7 @@
 
 .pageup-btn {
   bottom: +2rem;
+  opacity: 0;
 }
 
 .div-with-background {
